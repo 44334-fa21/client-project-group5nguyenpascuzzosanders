@@ -41,23 +41,35 @@ h1 {
 
 nav{
     font-weight: bold;
-	 letter-spacing: 0.1em;
+	letter-spacing: 0.1em;
+    font-size: 12pt;
+
     }
 
 
 nav ul {list-style-type: none;
     margin: 0px;
     padding: 0px;
-    
+    overflow: hidden;
+    background-color:#4eaee2;
   }
+
+nav li a {
+    float: left;
+    padding: 15px;
+
+}
+
 
 nav a{
   background-color: #4eaee2;
+  color: #fafafc;
   text-decoration: none;
   padding: 20px;
-  display: block;
   }
 
 
-nav a:hover{color: #112e51;
+nav a:hover{
+    color: #112e51;
+    background-color:#85c341;
 }
