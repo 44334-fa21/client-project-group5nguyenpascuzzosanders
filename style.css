@@ -2,6 +2,7 @@ body {
     background-color: #fafafc;
     font-family: Verdana, Tahoma, sans-serif;
     font-size: 13pt;
+    color:  #112e51;
 }
 
 .fixed-alert{
@@ -41,9 +42,8 @@ h1 {
 
 nav{
     font-weight: bold;
-	letter-spacing: 0.1em;
     font-size: 12pt;
-
+    display: inline;
     }
 
 
@@ -57,6 +57,7 @@ nav ul {list-style-type: none;
 nav li a {
     float: left;
     padding: 15px;
+
 
 }
 
@@ -73,3 +74,64 @@ nav a:hover{
     color: #112e51;
     background-color:#85c341;
 }
+/* Start of Search Bar form styling from https://pagedart.com/blog/how-to-add-a-search-bar-in-html/ */
+form {
+    background-color: #4eaee2;
+    width: 300px;
+    height: 44px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    float: right;
+  }
+
+  input {
+    all: unset;
+    font: 16px system-ui;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    padding: 6px 10px;
+  }
+  ::placeholder {
+    color: #fff;
+    opacity: 0.7; 
+  }
+
+  button {
+    all: unset;
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+  }
+  
+  svg {
+    color: #fff;
+    fill: currentColor;
+    width: 24px;
+    height: 24px;
+    padding: 10px;
+  }
+  /*End of Search Bar*/
+
+  .covid-alert{
+      background-color: #e8e2dc;
+      padding: 5pt;
+      position: inherit;
+      font-family: Verdana, Tahoma, sans-serif;
+      font-size: 10pt;
+      text-align: center;
+      letter-spacing: -.2pt;
+      margin: 5pt;
+  }
+
+  h2, p{
+      text-align: center;
+      color:  #112e51;
+  }
+
+  h3{
+      color: #85c341;
+  }
+

@@ -32,7 +32,32 @@
                 <li class="events"><a href="events.html">Events</a></li>
                 <li class="contact"><a href="contact.html">Contact</a></li>
                 <li><a href="https://www.swiamhds.com/services/hope_4_iowa/">Hope 4 Iowa Crisis Line</a></li>
+                <!--Search Bar from https://pagedart.com/blog/how-to-add-a-search-bar-in-html/-->
+                    <form role="search" id="form">
+                        <input type="search" id="query" name="q"
+                            placeholder="Search..."
+                            aria-label="Search through site content">
+                        <button>
+                            <svg viewBox="0 0 1024 1024"><path class="path1" d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path></svg>
+                        </button>
+                    </form>
+                    <script>
+                        const f = document.getElementById('form');
+                        const q = document.getElementById('query');
+                        const google = 'https://www.google.com/search?q=site%3A+';
+                        const site = 'http://www.waubonsiemhc.com/';
+            
+                        function submitted(event) {
+                        event.preventDefault();
+                        const url = google + site + '+' + q.value;
+                        const win = window.open(url, '_blank');
+                        win.focus();
+                        }
+            
+                        f.addEventListener('submit', submitted);
+                    </script>
             </ul> 
+            
            </nav> 
           <main> 
                 <p class="covid-alert">To mitigate the risk of a COVID-19 infection occurring at one of Waubonsie’s 
@@ -42,12 +67,13 @@
                     comfort and safety of their own homes.  Go to <a href="faq.html">Frequently Asked Questions </a> to know more about our mitigations.</p>
                 <!--Services Grid-->
                 <h2>Welcome</h2>
-                    <h3>Outpatient Therapy</h3>
-                    <h3>Medication Management</h3>
-                    <h3>Community Support Services</h3>
-                    <h3>Supported Living Community</h3>
-                    <h3>Integrated Health Home</h3>
-                    <h3>Peer Support Services</h3>
+                    <h3><a href="">Outpatient Therapy</h3></a>
+                    <h3><a href="">Medication Management</h3></a>
+                    <h3><a href="">Community Support Services</h3></a>
+                    <h3><a href="">Supported Living Community</h3></a>
+                    <h3><a href="">Integrated Health Home</h3></a>
+                    <h3><a href="">Peer Support Services</h3></a>
+                    
                 <!--Manage Your Appointment Button-->
                 <p class="button"><a href="contact.html" target="_blank">Manage Your Appointment</a></p>
 
