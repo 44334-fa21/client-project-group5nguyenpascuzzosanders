@@ -130,13 +130,18 @@ form {
       margin: 5pt;
   }
 
-  h4, h2, p{
+  h2, p{
       text-align: center;
       color:  #112e51;
   }
 
   h3{
       color: #85c341;
+  }
+
+  h4{
+    text-align: center;
+      color:  #85c341;
   }
 
 
