@@ -1,3 +1,7 @@
+*{
+
+  box-sizing: border-box;
+}
 body {
     background-color: #fafafc;
     font-family: Verdana, Tahoma, sans-serif;
@@ -61,10 +65,7 @@ nav ul {list-style-type: none;
 nav li a {
     float: left;
     padding: 15px;
-
-
 }
-
 
 nav a{
   background-color: #4eaee2;
@@ -72,7 +73,6 @@ nav a{
   text-decoration: none;
   padding: 20px;
   }
-
 
 nav a:hover{
     color: #112e51;
@@ -141,14 +141,80 @@ form {
 
   h4{
     text-align: center;
-      color:  #85c341;
+    color:  #85c341;
   }
 
+  /* Grid layout and button from https://www.youtube.com/watch?v=ZPb10kOQv0c */
+.box-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100px 100px;
+  grid-gap: 2rem;
+  padding: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
 
+.box-container .box {
+  box-shadow: 0 5px 10px rgba(0,0,0,.2);
+  border-radius: 5px;
+  background: linear-gradient(45deg, #85c341, #4eaee2);
+  
+}
 
-#grid {
-  grid-template-columns: auto auto auto;
-  grid-template-rows: auto auto;
+.box-container .box h3{
+  color: #fafafc;
+  font-size: 22px;
+  padding: 10px 0;
+  text-align: center;
+  vertical-align: middle;
+  overflow: wrap;
+}
+.box-container .box a{
+  color: #fafafc;
+  font-size: 22px;
+  padding: 10px 0;
+  text-decoration: none;
+}
+
+.box-container .box:hover{
+  box-shadow: 0 10px 15px rgba(0,0,0,.3);
+transform: scale(1.03);
+}
+
+.button{
+  margin-top: 10px;
+  display: inline-block;
+  background: #4eaee2;
+  color: #fafafc;
+  font-size: 17px;
+  border-radius: 5px;
+  padding: 8px 25px;
+  text-align: center;
+}
+
+.button a{
+  text-decoration: none;
+  color: #fafafc;
+}
+
+.button:hover{
+  letter-spacing: 1px;
+  transition: .3s;
 }
 
 
+
+
+/* Media Queries */
+@media only screen and (max-width: 1042px) {
+  .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    grid-gap: 2rem;
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 768px) { 
+}
