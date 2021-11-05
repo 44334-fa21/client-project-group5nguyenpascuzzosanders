@@ -13,98 +13,88 @@
         Since opening in 1982, it has been our mission to provide accessible,
         affordable, quality mental health services to the people
         of southwest Iowa.">
-  <link rel="stylesheet" href="lighthouse.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-  <div id="fixed-alert">
-    <p>Call<a href="tel:+17123037066">+1 (712) 303-7066</a></p>
+<body id="wrapper">
+  <div class="fixed-alert">
+    <p>NEED HELP NOW? Call <a href="tel:+17123037066">(712) 303-7066</a> In the event of an emergency, please call 911 or present to the nearest emergency room. </a></p>
   </div>
-  <div id="wrapper">
-    <header>
-      <h1>Waubonsie Mental Health Center</h1>
-    </header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="resources.html">Resources</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="https://www.swiamhds.com/services/hope_4_iowa/">Hope 4 Iowa Crisis Line</a></li>
-        <!-- SEARCH BAR TESTS
-        <label for="site-search">Search the site:</label>
-        <input type="search" id="site-search" name="q" aria-label="Search through site content">
-        <button>Search</button>
-
-        <div class="topnav">
-        <a class="active" href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-        <input type="text" placeholder="Search..">
-        </div>
-        -->
-
-      </ul>
-    </nav>
-    <main>
-      <p class="covid-alert">To mitigate the risk of a COVID-19 infection occurring at one of Waubonsie’s
-        sites, we've implemented increased cleaning/hygiene measures
-        throughout our facilities and have vastly expanded our
-        telehealth offerings to offer services to clients from the
-        comfort and safety of their own homes. Go to <a href="faq.html">Frequently Asked Questions </a> to know more about our mitigations.</p>
-
-
-      <!--DROP DOWN TEST<p>TITLE</p>
-      <button onclick="myFunction()">Click for more information</button>
-      <p id="demo"></p>
+  <header>
+    <h1>Waubonsie Mental Health Center</h1>
+  </header>
+  <nav>
+    <ul>
+      <li class="home"><a href="index.html">Home</a></li>
+      <li class="about"><a href="about.html">About</a></li>
+      <li class="faq"><a href="faq.html">FAQ</a></li>
+      <li class="services"><a href="services.html">Services</a></li>
+      <li class="res"><a href="resources.html">Resources</a></li>
+      <li class="events"><a href="events.html">Events</a></li>
+      <li class="contact"><a href="contact.html">Contact</a></li>
+      <li><a href="https://www.swiamhds.com/services/hope_4_iowa/">Hope 4 Iowa Crisis Line</a></li>
+      <!--Search Bar from https://pagedart.com/blog/how-to-add-a-search-bar-in-html/-->
+      <form role="search" id="form">
+        <input type="search" id="query" name="q" placeholder="Search..." aria-label="Search through site content">
+        <button>
+          <svg viewBox="0 0 1024 1024">
+            <path class="path1"
+              d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z">
+            </path>
+          </svg>
+        </button>
+      </form>
       <script>
-        function myFunction() {
-          document.getElementById("demo").innerHTML = "Here is the text that pops up";
+        const f = document.getElementById('form');
+        const q = document.getElementById('query');
+        const google = 'https://www.google.com/search?q=site%3A+';
+        const site = 'http://www.waubonsiemhc.com/';
+
+        function submitted(event) {
+          event.preventDefault();
+          const url = google + site + '+' + q.value;
+          const win = window.open(url, '_blank');
+          win.focus();
         }
+
+        f.addEventListener('submit', submitted);
       </script>
--->
+    </ul>
 
-      <p>OUTPATIENT THERAPY</p>
-      <button onclick="myFunction()">Click for more information</button>
-      <p id="outpatient"></p>
-      <script>
-        function myFunction() {
-          document.getElementById("outpatient").innerHTML =
-            "Therapy is an excellent resource for individuals facing a myriad of challenges
-          ranging from depression or anxiety to trauma - and everything in between.
-          Our licensed staff is trained to work with individuals, couples, and families.
-          Types of therapy offered include Cognitive Behavioral Therapy, EMDR, Play Therapy, and more.
-          ";
-        }
-      </script>
+  </nav>
+  <main>
+    <p class="covid-alert">To mitigate the risk of a COVID-19 infection occurring at one of Waubonsie’s
+      sites, we've implemented increased cleaning/hygiene measures
+      throughout our facilities and have vastly expanded our
+      telehealth offerings to offer services to clients from the
+      comfort and safety of their own homes. Go to <a href="faq.html">Frequently Asked Questions </a> to know more about our mitigations.</p>
 
+    <h2>Services</h2>
 
-
-
-
-
-      <!--Descriptions & Lists of Services-->
-      <h2>OUTPATIENT THERAPY</h2>
-      Therapy is an excellent resource for individuals facing a myriad of challenges
-      ranging from depression or anxiety to trauma- and everything in between.
-      Our licensed staff is trained to work with individuals, couples, and families.
-      Types of therapy offered include Cognitive Behavioral Therapy, EMDR, Play Therapy, and more.
-      </br>
+    <details>
+      <summary>
+        <h2>OUTPATIENT THERAPY</h2>
+      </summary>
+      <p> Therapy is an excellent resource for individuals facing a myriad of challenges
+        ranging from depression or anxiety to trauma- and everything in between.
+        Our licensed staff is trained to work with individuals, couples, and families.
+        Types of therapy offered include Cognitive Behavioral Therapy, EMDR, Play Therapy, and more.
+        </br>
 
       <h4>Where can I get this service?</br></h4>
       Clarinda, Red Oak, Shenandoah, & at home via telehealth!</br>
 
       <h4>Who's eligible to receive this service?</br></h4>
       This service is available to adults and children of all ages, from any community, that are capable of attending appointments onsite, or from their homes via telehealth during standard business hours.</br>
+    </details>
 
-
-      <h2>MEDICATION MANAGEMENT</h2>
-      What is medication management?</br></h4>
-      Our licensed and highly qualified Medication Management team offers assessments, prescriptions,
-      and ongoing care/monitoring for individuals taking psychiatric medications.</br>
+    <details>
+      <summary>
+        <h2>MEDICATION MANAGEMENT</h2>
+      </summary>
+      <p> What is medication management?</br></h4>
+        Our licensed and highly qualified Medication Management team offers assessments, prescriptions,
+        and ongoing care/monitoring for individuals taking psychiatric medications.</br>
 
       <h4>Where can I get this service?</br></h4>
       Clarinda, Red Oak, Shenandoah, Villisca
@@ -112,8 +102,13 @@
 
       <h4>Who's eligible to receive this service?</br></h4>
       This service is available to adults and children of all ages, from any community, that are capable of attending appointments onsite, or from their homes via telehealth during standard business hours.</br>
+    </details>
 
-      <h2>COMMUNITY SUPPORT SERVICES (CSS)</h2>
+
+    <details>
+      <summary>
+        <h2>COMMUNITY SUPPORT SERVICES (CSS)</h2>
+      </summary>
       <h4>What is CSS?</br></h4>
       Community Support Services provides home and community-based support to individuals living with serious,
       persistent mental illness. Together with their assigned Community Support Specialist,
@@ -127,9 +122,12 @@
       with a history of psychiatric treatment more intensive than outpatient care,
       more than once in their lifetime, that are in need of assistance/additional supports
       in order to function in their community. Iowa Medicaid or regional funding are required for eligibility.</br>
+    </details>
 
-
-      <h2>SUPPORTED COMMUNITY LIVING</h2>
+    <details>
+      <summary>
+        <h2>SUPPORTED COMMUNITY LIVING</h2>
+      </summary>
       <h4>What is CSS?</br></h4>
       Like CSS, Supported Community Living also provides home and community-based
       support to individuals living with serious, persistent mental illness.
@@ -145,9 +143,12 @@
       more than once in their lifetime, that are in need of assistance/additional
       supports in order to function in their community. Iowa Medicaid or regional
       funding are required for eligibility.</br>
+    </details>
 
-
-      <h2>INTEGRATED HEALTH HOME (IHH)</h2>
+    <details>
+      <summary>
+        <h2>INTEGRATED HEALTH HOME (IHH)</h2>
+      </summary>
       <h4>What is IHH?</br></h4>
       Our Integrated Health Home (IHH) is a team of professionals,
       including family and peer support services, that work together
@@ -164,9 +165,12 @@
       <h4>Who's eligible to receive this service?</br></h4>
       This service is available to children and adults enrolled in Iowa Medicaid
       and residing in one of the above listed counties.</br>
+    </details>
 
-
-      <h2>PEER SUPPORT SERVICES</h2>
+    <details>
+      <summary>
+        <h2>PEER SUPPORT SERVICES</h2>
+      </summary>
       <h4>What are Peer Support Services?</br></h4>
       Peer Support Services offer opportunities for learning and skill building
       in a peer-driven setting. Our Peer Support Services offer a dynamic mix of groups,
@@ -185,28 +189,27 @@
       Call us to learn more!
 
       Who's eligible to receive this service?
-      Any adult with Iowa Medicaid or regional funding. Call our offices for more info!
+      Any adult with Iowa Medicaid or regional funding. Call our offices for more info
+    </details>
+  </main>
 
 
+  <footer>
+    <p>Copyright &copy; 2021</p>
+    <img src="" height="" width="" alt="Waubonsie Logo">
+    <!--In Line Nav-->
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="faq.html">FAQ</a>
+    <a href="services.html">Services</a>
+    <a href="resources.html">Resources</a>
+    <a href="events.html">Events</a>
+    <a href="contact.html">Contact</a>
+    <a href="https://www.swiamhds.com/services/hope_4_iowa/">Hope 4 Iowa Crisis Line</a>
 
-    </main>
+    <!--Quick Link to Services We Offer for SEO purposes-->
+    <h6>Services</h6>
+    <h6>Employees</h6>
+    <h6>Careers</h6>
 
-    <footer>
-      <p>Copyright &copy; 2021</p>
-      <img src="" height="" width="" alt="Waubonsie Logo">
-      <!--In Line Nav-->
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="faq.html">FAQ</a>
-      <a href="services.html">Services</a>
-      <a href="resources.html">Resources</a>
-      <a href="events.html">Events</a>
-      <a href="contact.html">Contact</a>
-      <a href="https://www.swiamhds.com/services/hope_4_iowa/">Hope 4 Iowa Crisis Line</a>
-
-      <!--Quick Link to Services We Offer for SEO purposes-->
-      <h6>Services</h6>
-      <h6>Employees</h6>
-      <h6>Careers</h6>
-
-    </footer>
+  </footer>
