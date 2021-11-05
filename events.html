@@ -6,63 +6,92 @@
   <meta name=viewport content="width=device-width, initial-scale=1">
   <title>Home | Waubonsie Mental Health Center</title>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="style.scss">
+  <link rel="stylesheet" href="style.css">
   <!--DESCRIPTION-->
   <meta name="description" content="Waubonsie Mental Health Center
         is an accredited, non-profit, Community Mental Health Center.
         Since opening in 1982, it has been our mission to provide accessible,
         affordable, quality mental health services to the people
         of southwest Iowa.">
-  <link rel="stylesheet" href="lighthouse.css">
 </head>
 
 <body>
-  <div id="fixed-alert">
-    <p>Call<a href="tel:+17123037066">+1 (712) 303-7066</a></p>
+  <div class="fixed-alert">
+    <p>NEED HELP NOW? Call <a href="tel:+17123037066">(712) 303-7066</a> In the event of an emergency, please call 911 or present to the nearest emergency room. </a></p>
   </div>
-  <div id="wrapper">
-    <header>
-      <h1>Waubonsie Mental Health Center</h1>
-    </header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="resources.html">Resources</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="https://www.swiamhds.com/services/hope_4_iowa/">Hope 4 Iowa Crisis Line</a></li>
-      </ul>
-    </nav>
-    <main>
-      <p class="covid-alert">To mitigate the risk of a COVID-19 infection occurring at one of Waubonsie’s
-        sites, we've implemented increased cleaning/hygiene measures
-        throughout our facilities and have vastly expanded our
-        telehealth offerings to offer services to clients from the
-        comfort and safety of their own homes. Go to <a href="faq.html">Frequently Asked Questions </a> to know more about our mitigations.</p>
-      <!--GOOGLE CALENDAR PLUG-IN
+  <header>
+    <h1>Waubonsie Mental Health Center</h1>
+  </header>
+  <nav>
+    <ul>
+      <!-- HIGHLIGHT THE ACTIVE ONE-->
+      <li class="home"><a href="index.html">Home</a></li>
+      <li class="about"><a href="about.html">About</a></li>
+      <li class="faq"><a href="faq.html">FAQ</a></li>
+      <li class="services"><a href="services.html">Services</a></li>
+      <li class="res"><a href="resources.html">Resources</a></li>
+      <li class="events"><a href="events.html">Events</a></li>
+      <li class="contact"><a href="contact.html">Contact</a></li>
+      <li><a href="https://www.swiamhds.com/services/hope_4_iowa/">Hope 4 Iowa Crisis Line</a></li>
+
+      <!--Search Bar from https://pagedart.com/blog/how-to-add-a-search-bar-in-html/-->
+      <form role="search" id="form">
+        <input type="search" id="query" name="q" placeholder="Search..." aria-label="Search through site content">
+        <button>
+          <svg viewBox="0 0 1024 1024">
+            <path class="path1"
+              d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z">
+            </path>
+          </svg>
+        </button>
+      </form>
+      <script>
+        const f = document.getElementById('form');
+        const q = document.getElementById('query');
+        const google = 'https://www.google.com/search?q=site%3A+';
+        const site = 'http://www.waubonsiemhc.com/';
+
+        function submitted(event) {
+          event.preventDefault();
+          const url = google + site + '+' + q.value;
+          const win = window.open(url, '_blank');
+          win.focus();
+        }
+
+        f.addEventListener('submit', submitted);
+      </script>
+    </ul>
+
+  </nav>
+  <main>
+    <p class="covid-alert">To mitigate the risk of a COVID-19 infection occurring at one of Waubonsie’s
+      sites, we've implemented increased cleaning/hygiene measures
+      throughout our facilities and have vastly expanded our
+      telehealth offerings to offer services to clients from the
+      comfort and safety of their own homes. Go to <a href="faq.html">Frequently Asked Questions </a> to know more about our mitigations.</p>
+
+    <!--GOOGLE CALENDAR PLUG-IN-->
+    <div id="calendar">
       <iframe src="https://calendar.google.com/calendar/embed?src=q0qedfe7bo6t7oubnuub9k8j7c%40group.calendar.google.com&ctz=America%2FChicago" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-      -->
-    </main>
+    </div>
+  </main>
 
-    <footer>
-      <p>Copyright &copy; 2021</p>
-      <img src="" height="" width="" alt="Waubonsie Logo">
-      <!--In Line Nav-->
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="faq.html">FAQ</a>
-      <a href="services.html">Services</a>
-      <a href="resources.html">Resources</a>
-      <a href="events.html">Events</a>
-      <a href="contact.html">Contact</a>
-      <a href="https://www.swiamhds.com/services/hope_4_iowa/">Hope 4 Iowa Crisis Line</a>
+  <footer>
+    <p>Copyright &copy; 2021</p>
+    <img src="" height="" width="" alt="Waubonsie Logo">
+    <!--In Line Nav-->
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="faq.html">FAQ</a>
+    <a href="services.html">Services</a>
+    <a href="resources.html">Resources</a>
+    <a href="events.html">Events</a>
+    <a href="contact.html">Contact</a>
+    <a href="https://www.swiamhds.com/services/hope_4_iowa/">Hope 4 Iowa Crisis Line</a>
 
-      <!--Quick Link to Services We Offer for SEO purposes-->
-      <h6>Services</h6>
-      <h6>Employees</h6>
-      <h6>Careers</h6>
+    <!--Quick Link to Services We Offer for SEO purposes-->
+    <h6>Services</h6>
+    <h6>Employees</h6>
+    <h6>Careers</h6>
 
-    </footer>
+  </footer>
