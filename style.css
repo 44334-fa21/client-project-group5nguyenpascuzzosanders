@@ -179,18 +179,25 @@ form {
 
 .box-container .box:hover{
   box-shadow: 0 10px 15px rgba(0,0,0,.3);
-transform: scale(1.03);
+  transform: scale(1.03);
+  cursor: pointer;
 }
 
 .button{
-  margin-top: 10px;
-  display: inline-block;
+  margin-top: 20px;
   background: #4eaee2;
   color: #fafafc;
   font-size: 17px;
   border-radius: 5px;
-  padding: 8px 25px;
-  text-align: center;
+  padding: 10px 10px;
+  display: flex;
+  cursor: pointer;
+  position: relative;
+  width: fit-content;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
 }
 
 .button a{
@@ -200,10 +207,22 @@ transform: scale(1.03);
 
 .button:hover{
   letter-spacing: 1px;
-  transition: .3s;
+  transition: .1s;
 }
 
+.center {
 
+}
+
+/* Services Page Style */
+summary {
+  font-size: 30px;
+  display: flex;
+  align-items:center;
+}
+summary > div {
+  width:100%;
+}
 
 
 /* Media Queries */
