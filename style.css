@@ -79,6 +79,11 @@ nav a:hover {
   background-color: #85c341;
 }
 
+.nav .current {
+  color: #112e51;
+  background-color: #85c341;
+}
+
 /* Start of Search Bar form styling from https://pagedart.com/blog/how-to-add-a-search-bar-in-html/ */
 form {
   background-color: #4eaee2;
@@ -115,8 +120,8 @@ button {
 svg {
   color: #fff;
   fill: currentColor;
-  width: 24px;
-  height: 24px;
+  width: 40px;
+  height: 40px;
   padding: 10px;
 }
 
