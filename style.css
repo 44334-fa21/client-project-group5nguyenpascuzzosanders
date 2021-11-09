@@ -210,15 +210,22 @@ form {
   transition: .1s;
 }
 
-.center {
+.flex-container{
+  display: flex;
+}
 
+.flex-container .left {
+  justify-content: left;
+}
+
+.flex-container .right {
+  justify-content: right;
 }
 
 /* Services Page Style */
 summary {
-  font-size: 30px;
   display: flex;
-  align-items:center;
+  justify-content:center;
 }
 summary > div {
   width:100%;
