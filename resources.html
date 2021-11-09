@@ -8,21 +8,26 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.scss">
   <!--DESCRIPTION-->
-    <link rel="shortcut icon" type="image/png" href="Images/favicon.ico">
+  <link rel="shortcut icon" type="image/png" href="Images/favicon.ico">
   <meta name="description" content="Waubonsie Mental Health Center
         is an accredited, non-profit, Community Mental Health Center.
         Since opening in 1982, it has been our mission to provide accessible,
         affordable, quality mental health services to the people
         of southwest Iowa.">
   <link rel="stylesheet" href="style.css">
+  <style>
+    .reslink a {
+      text-decoration: none;
+      color: #fff
+    }
 
+    .serviceslink a {
+      text-decoration: none;
+      color: #112e51
+    }
+  </style>
 
 </head>
-<style>
-  .reslink {
-    text-decoration: none;
-  }
-</style>
 
 <body id="wrapper">
   <div class="fixed-alert">
@@ -85,41 +90,43 @@
 
 
     <ul>
-      <div class="reslink" id="calltext" style="background-color: #4eaee2;
+      <div id="calltext" style="background-color: #4eaee2;
         font-family: verdana;
         padding: 10px;
         border: none;
         border-radius: 25px;
         margin: 10px;
         text-align: center;">
-        <p><a href="http://www.waubonsiemhc.com/">Waubonsie Support Line </a><b> (712) 303-7066 </b></br>
-          <a href="https://www.swiamhds.com/services/hope_4_iowa/">Hope 4 Iowa Crisis Call Line </a><b>(844) 673-4469 </b></br>
-          <a href="https://suicidepreventionlifeline.org/">National Suicide Prevention Lifeline </a><b> (800) 273-8255 </b></br>
-          <a href="https://nami.org/Home">National Alliance on Mental Illness </a> <b>(800) 950-NAMI</b></br>
-          <a href="url">Waubonsie Support Line</a> Text <b>"HELLO" to 741741</b></br>
-        </P>
+        <div class="reslink">
+          <p><a href="http://www.waubonsiemhc.com/">Waubonsie Support Line </a><b> (712) 303-7066 </b></br>
+            <a href="https://www.swiamhds.com/services/hope_4_iowa/">Hope 4 Iowa Crisis Call Line </a><b>(844) 673-4469 </b></br>
+            <a href="https://suicidepreventionlifeline.org/">National Suicide Prevention Lifeline </a><b> (800) 273-8255 </b></br>
+            <a href="https://nami.org/Home">National Alliance on Mental Illness </a> <b>(800) 950-NAMI</b></br>
+            <a href="url">Waubonsie Support Line</a> Text <b>"HELLO" to 741741</b></br>
+          </P>
     </ul>
 
     <!--ANCHORS TO OUR SERVICES-->
-    <h2><a href="services.html">Services We Offer</a></h2>
-    <ul>
-      <div id="serviceslist" style="background-color: #4eaee2;
+    <div class="serviceslink">
+      <h2><a href="services.html">Services We Offer</a></h2>
+      <ul>
+        <div id="serviceslist" style="background-color: #4eaee2;
         font-family: verdana;
         padding: 10px;
         border: none;
         border-radius: 25px;
         margin: 10px;
         text-align: center;">
-        <p>
-          Outpatient Therapy </br>
-          Medication Management </br>
-          Community Support Services (CSS) </br>
-          Supports Community Living </br>
-          Intergrated Health Home (IHH) </br>
-          Peer Support Services </br>
-        <p class="button3"><a href="services.html">Read More</a></p>
-        </p>
-    </ul>
+          <p>
+            Outpatient Therapy </br>
+            Medication Management </br>
+            Community Support Services (CSS) </br>
+            Supports Community Living </br>
+            Intergrated Health Home (IHH) </br>
+            Peer Support Services </br> </p>
+
+          <p class="button3"><a href="services.html">Read More</a></p>
+      </ul>
 
   </main>
   <footer>
