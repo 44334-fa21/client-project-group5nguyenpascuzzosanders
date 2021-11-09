@@ -197,7 +197,6 @@ form {
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 20px;
 }
 
 .button a{
@@ -212,18 +211,98 @@ form {
 
 .flex-container{
   display: flex;
+  flex-direction: row;
+  background-color: #d8d8d8;
+  padding: 20px;
+  height: fit-content;
 }
 
 .flex-container .left {
+  align-items: left;
+  
+}
+
+.flex-container .right-responsive {
+  align-items: right;
+  margin: 0;
+}
+
+/* From https://www.freecodecamp.org/news/css-responsive-image-tutorial/ */
+.flex-container .right-responsive img{
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  padding-left: 20px;  
+}
+
+.button3{
+  margin-top: 20px;
+  background: #85c341;
+  font-size: 17px;
+  border-radius: 5px;
+  padding: 10px 10px;
+  display: flex;
+  cursor: pointer;
+  position: relative;
+  width: fit-content;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button3 a{
+  text-decoration: none;
+  color: #fafafc;
+}
+
+.button3:hover{
+  letter-spacing: 1px;
+  transition: .1s;
+}
+
+.resources-banner{
+  background-color: #4eaee2;
+  padding:20px;
+}
+
+.resources-banner p{
+  text-align: left;
+  color: #fafafc;
+}
+
+.resources-banner ul{
+  color: #fafafc;
+}
+
+.button2{
+  margin-top: 20px;
+  background: #85c341;
+  font-size: 17px;
+  border-radius: 5px;
+  padding: 10px 10px;
+  display: flex;
+  cursor: pointer;
+  position: relative;
+  width: fit-content;
   justify-content: left;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.flex-container .right {
-  justify-content: right;
+.button2 a{
+  text-decoration: none;
+  color: #fafafc;
 }
 
+.button2:hover{
+  letter-spacing: 1px;
+  transition: .1s;
+}
+
+}
 /* Services Page Style */
 summary {
+  cursor: pointer;
   display: flex;
   justify-content:center;
 }
@@ -232,6 +311,20 @@ summary > div {
 }
 
 
+/*Footer Style */
+footer{
+  font-size: 70%;
+	text-align: center;
+	padding: 10px;
+	background-color: #fafafc;
+	clear: both;
+  display: flex;
+  flex-direction: row;  
+}
+
+.footer-logo{
+flex: 1;
+}
 /* Media Queries */
 @media only screen and (max-width: 1042px) {
   .box-container {
@@ -240,6 +333,13 @@ summary > div {
     grid-gap: 2rem;
     padding: 10px;
   }
+
+  .flex-container .right-responsive {
+    display: none;
+  }
+
+
+
 }
 
 @media only screen and (max-width: 768px) { 
