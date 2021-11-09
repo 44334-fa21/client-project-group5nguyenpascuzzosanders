@@ -353,4 +353,15 @@ footer a:hover {
     }
   }
 
-  @media only screen and (max-width: 768px) {}
+  @media only screen and (max-width: 768px) {
+    .box-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      grid-gap: 2rem;
+      padding: 10px;
+    }
+
+    .flex-container .right-responsive {
+      display: none;
+    }
+  }
