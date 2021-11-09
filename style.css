@@ -169,6 +169,7 @@ h4 {
   padding: 10px 0;
   text-align: center;
   vertical-align: middle;
+  height: fit-content;
   overflow: wrap;
 }
 
@@ -299,7 +300,6 @@ h4 {
   letter-spacing: 1px;
   transition: .1s;
 }
-}
 
 /* Services Page Style */
 summary {
@@ -325,19 +325,20 @@ footer {
 }
 
 footer a {
-  background-color: #4eaee2;
-  color: #fafafc;
+  color: #4eaee2;
   text-decoration: none;
-  padding: 5px;
+  
+}
+
+.footer-nav a {
+  display: inline-flex;
+  margin: 5pt;
 }
 
 footer a:hover {
   color: #112e51;
   background-color: #85c341;
-
-  .footer-logo {
-    flex: 1;
-  }
+}
 
   /* Media Queries */
   @media only screen and (max-width: 1042px) {
